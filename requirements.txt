@@ -6,3 +6,6 @@ Google-generativeai
 Sentence-transformers
 openpyxl
 schedule
+langgraph
+crewai
+autogen
