@@ -1,0 +1,31 @@
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - "${PATHWAY_PORT:-8000}:${PATHWAY_PORT:-8000}"
+    networks:
+      - network
+    environment:
+      PATHWAY_PORT: "${PATHWAY_PORT:-8000}"
+      PATHWAY_LICENSE_KEY: 67D9C0-4BB389-BA9CCF-8C638B-7CFE79-V3
+      GEMINI_API_KEY: AIzaSyC9papYxKILX2BbqVI9dvWUYaP2lwtwOsA
+    volumes:
+      - ./data:/app/data
+      - ./Cache:/app/Cache
+
+  ui:
+    build:
+      context: ui
+    networks:
+      - network
+    environment:
+      PATHWAY_HOST: "app"
+      PATHWAY_PORT: "${PATHWAY_PORT:-8000}"
+      UI_PORT: 8501
+    ports:
+      - "8501:8501"
+
+networks:
+  network:
+    driver: bridge
