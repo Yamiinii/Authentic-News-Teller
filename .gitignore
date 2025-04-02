@@ -1,0 +1,4 @@
+.env.example
+pathway-rag-166d1aa63a1c.json
+docker-compose.yml
+./newsfiles/pathway-rag-166d1aa63a1c.json

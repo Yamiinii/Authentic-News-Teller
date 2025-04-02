@@ -1,0 +1,25 @@
+sources:
+  # - !pw.io.fs.read
+  #   path: newsinfo
+  #   format: binary
+  #   with_metadata: true
+
+  # - !pw.xpacks.connectors.sharepoint.read 
+  #   url: $SHAREPOINT_URL
+  #   tenant: $SHAREPOINT_TENANT
+  #   client_id: $SHAREPOINT_CLIENT_ID
+  #   cert_path: sharepointcert.pem
+  #   thumbprint: $SHAREPOINT_THUMBPRINT
+  #   root_path: $SHAREPOINT_ROOT
+  #   with_metadata: true
+  #   refresh_interval: 30
+
+  - !pw.io.gdrive.read
+    object_id: 1mbqVCpCmhOF99bfFc4OZrwr_ut1_-jxESGCwCbFM3dw
+    service_user_credentials_file: pathway-rag-166d1aa63a1c.json
+    # file_name_pattern:
+    #   - "*.xlsx"
+    object_size_limit: null
+    # with_metadata: true
+    refresh_interval: 30
+    name: "news Data"
