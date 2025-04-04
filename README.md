@@ -1,8 +1,17 @@
-# Pathway RAG Application
+# Authentic News Teller
 
-A powerful RAG (Retrieval-Augmented Generation) application built using Pathway, designed to provide intelligent question-answering capabilities with hybrid search functionality.
+A powerful news verification and question-answering system built using Pathway RAG (Retrieval-Augmented Generation) technology. This application helps users verify news authenticity and get accurate information from trusted news sources.
 
-## Features
+## Key Features
+
+- **News Verification**: Intelligent system to help verify news authenticity and provide factual context
+- **Smart News Processing**: Processes and analyzes news articles from various sources
+- **Accurate Information Retrieval**: Uses hybrid search to find relevant news and facts
+- **Real-time Answers**: Get immediate responses to questions about news articles
+- **Source Verification**: Helps identify and validate news sources
+- **Fact Cross-referencing**: Cross-references information across multiple news sources
+
+## Technical Features
 
 - **Hybrid Search**: Combines BM25 keyword-based search with vector-based semantic search for optimal results
 - **Document Processing**: Supports various document formats with UnstructuredParser
@@ -35,10 +44,11 @@ cp .env.example .env
 ## Configuration
 
 The application is configured through `app.yaml`. Key configuration options include:
-- Document sources
-- LLM model settings
+- News source directories and files
+- LLM model settings for news analysis
 - Embedding model selection
 - Server host and port settings
+- News processing parameters
 
 ## Usage
 
@@ -76,9 +86,9 @@ python app.py
 ├── docker-compose.yml    # Docker Compose configuration
 ├── requirements.txt      # Python dependencies
 ├── .env.example         # Environment variables template
-├── Cache/               # Cache directory
-├── data/                # Data storage
-├── newsfiles/          # News documents
+├── Cache/               # Cache directory for response optimization
+├── data/                # Data storage for processed news
+├── newsfiles/          # Source news documents
 └── ui/                  # User interface components
 ```
 
@@ -90,6 +100,14 @@ python app.py
 - litellm>=1.35
 - Google-generativeai
 - Sentence-transformers
+
+## How It Works
+
+1. **News Input**: The system processes news articles from various sources
+2. **Analysis**: Uses advanced NLP to analyze news content
+3. **Verification**: Cross-references information with trusted sources
+4. **Response Generation**: Provides accurate, verified information to user queries
+5. **Source Tracking**: Maintains transparency by tracking and citing sources
 
 ## License
 
