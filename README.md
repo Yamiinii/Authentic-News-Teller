@@ -56,8 +56,8 @@ The application is configured through `app.yaml`. Key configuration options incl
 
 1. Build and start the application:
 ```bash
-docker-compose build
-docker-compose up
+docker compose build
+docker compose up
 ```
 
 The application will be available at `http://localhost:8000`.
