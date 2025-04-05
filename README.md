@@ -32,12 +32,13 @@ A powerful news verification and question-answering system built using Pathway R
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd pathway-rag
+cd authentic-news-teller
 ```
 
 2. Set up environment variables:
 ```bash
-cp .env.example .env
+set up with pathway license key .env.example
+set up files for accessing your google sheet, sheet id
 # Edit .env with your configuration
 ```
 
