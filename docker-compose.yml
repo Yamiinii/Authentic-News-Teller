@@ -1,0 +1,42 @@
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    networks:
+      - network
+    environment:
+      PATHWAY_PORT: "8000"
+      PATHWAY_LICENSE_KEY: "<REDACTED>"
+      GEMINI_API_KEY: "<REDACTED>"
+    volumes:
+      - ./data:/app/data
+      - ./Cache:/app/Cache
+
+  ui:
+    build:
+      context: ui
+    networks:
+      - network
+    environment:
+      PATHWAY_HOST: "app"
+      PATHWAY_PORT: "8000"
+      UI_PORT: 8501
+      GEMINI_API_KEY: "<REDACTED>"
+      SERPAPI: "<REDACTED>"
+    ports:
+      - "8501:8501"
+  
+  news:
+    build:
+      context: newsfiles
+    networks:
+      - network
+    environment:
+      API_KEY: "<REDACTED>"
+      SHEET_ID: "<REDACTED>"
+
+networks:
+  network:
+    driver: bridge
