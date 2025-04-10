@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 =======
 # Authentic News Teller
 
