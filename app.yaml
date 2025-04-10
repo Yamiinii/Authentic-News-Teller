@@ -1,8 +1,15 @@
 sources:
+<<<<<<< HEAD
   - !pw.io.fs.read
     path: data
     format: csv
     with_metadata: true
+=======
+  # - !pw.io.fs.read
+  #   path: newsinfo
+  #   format: binary
+  #   with_metadata: true
+>>>>>>> other/main
 
   # - !pw.xpacks.connectors.sharepoint.read 
   #   url: $SHAREPOINT_URL
@@ -14,6 +21,7 @@ sources:
   #   with_metadata: true
   #   refresh_interval: 30
 
+<<<<<<< HEAD
   # - !pw.io.gdrive.read
   #   object_id: $DRIVE_ID
   #   service_user_credentials_file: gdrive_indexer.json
@@ -23,3 +31,14 @@ sources:
   #   object_size_limit: null
   #   with_metadata: true
   #   refresh_interval: 30
+=======
+  - !pw.io.gdrive.read
+    object_id: 1mbqVCpCmhOF99bfFc4OZrwr_ut1_-jxESGCwCbFM3dw
+    service_user_credentials_file: pathway-rag-166d1aa63a1c.json
+    # file_name_pattern:
+    #   - "*.xlsx"
+    object_size_limit: null
+    # with_metadata: true
+    refresh_interval: 30
+    name: "news Data"
+>>>>>>> other/main
