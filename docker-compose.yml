@@ -9,8 +9,8 @@ services:
       - network
     environment:
       PATHWAY_PORT: "${PATHWAY_PORT:-8000}"
-      PATHWAY_LICENSE_KEY: 67D9C0-4BB389-BA9CCF-8C638B-7CFE79-V3
-      GEMINI_API_KEY: AIzaSyC9papYxKILX2BbqVI9dvWUYaP2lwtwOsA
+      PATHWAY_LICENSE_KEY: SECRET
+      GEMINI_API_KEY: SECRET
 =======
       - "8000:8000"
     networks:
